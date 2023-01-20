@@ -1,6 +1,7 @@
 module Main where
+import ExampleFunction
 
 main :: IO ()
 main = do
-    exampleFunction 1 2
-    IO ()
+    let sum = exampleSum 1 2
+    print sum

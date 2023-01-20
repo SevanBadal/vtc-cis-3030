@@ -27,3 +27,13 @@ tests/FirstFunctionTest.hs:7:82: error:
 7 | testGreet = TestCase (assertEqual "should return Hello, Sevan!" "Hello, Sevan!" (greet "Sevan"))
   |                                                                                  ^^^^^
 ```
+
+Without modifying source code, `cabal run first-function` should fail with the following error:
+
+```
+app/Main.hs:6:27: error:
+    Variable not in scope: greet :: [Char] -> t
+  |
+6 |     let greetingmessage = greet "sevan"
+  |              
+```

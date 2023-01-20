@@ -1,6 +1,7 @@
 module Main where
+import FirstFunction
 
 main :: IO ()
 main = do
-    greet "sevan"
-    IO ()
+    let greetingmessage = greet "sevan"
+    putStrLn greetingmessage
