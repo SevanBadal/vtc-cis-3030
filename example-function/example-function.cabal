@@ -20,20 +20,20 @@ extra-source-files:  CHANGELOG.md
 library example-function-lib
     exposed-modules: ExampleFunction
     hs-source-dirs: lib
-    build-depends: base ^>=4.14
+    build-depends: base ^>=4.16.4.0
     default-language: Haskell2010
 
 executable example-function
   main-is:             Main.hs
   -- other-modules:
   -- other-extensions:
-  build-depends: base ^>=4.14, example-function-lib
+  build-depends: base ^>=4.16.4.0, example-function-lib
   hs-source-dirs:      app
   default-language:    Haskell2010
 
 test-suite tests
     type: exitcode-stdio-1.0
     main-is: ExampleFunctionTest.hs
-    build-depends: base ^>=4.14, HUnit ^>=1.6, example-function-lib
+    build-depends: base ^>=4.16.4.0, HUnit ^>=1.6, example-function-lib
     hs-source-dirs: tests
     default-language: Haskell2010
