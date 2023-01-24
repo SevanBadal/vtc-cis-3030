@@ -15,3 +15,6 @@ Cabal is required to build/run the testsuite and main application of each subdir
 
 Contact your instructor immediately if you are unable to complete the installation described above. 
 
+### Toolchain Version Checklist
+[]  GHC   9.2.5           recommended,base-4.16.4.0  
+[]  cabal 3.6.2.0         recommended     
