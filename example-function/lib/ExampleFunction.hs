@@ -8,11 +8,11 @@ module ExampleFunction where
 exampleSum :: Int -> Int -> Int
 exampleSum x y = x + y
 
--- add a type signature
-exampleDiff replaceMe andReplaceMe = replaceMe
+exampleDiff :: Int -> Int -> Int
+exampleDiff x y = x - y
 
--- add a type signature
-exampleProduct replaceMe andReplaceMe = replaceMe
+exampleProduct :: Int -> Int -> Int
+exampleProduct x y = x * y
 
--- add a type signature
-exampleQuotient replaceMe andReplaceMe = replaceMe
+exampleQuotient :: Float -> Float -> Float
+exampleQuotient x y = x / y
