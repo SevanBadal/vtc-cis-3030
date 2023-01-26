@@ -7,3 +7,6 @@ module FirstFunction where
 
 exampleSum :: Int -> Int -> Int
 exampleSum x y = x + y
+
+greet :: String -> String
+greet x = "Hello, " ++ x ++ "!"
