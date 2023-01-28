@@ -1,19 +1,16 @@
 module SimpleFunctions where
 
--- Write your first haskell function here
--- Debug in GHCi
--- Run main with cabal
--- Test with cabal
-
 exampleSum :: Int -> Int -> Int
 exampleSum x y = x + y
 
--- 1. Define a function called basicMath that takes a pair of Integrals and returns a tuple with the sum, difference, product and quotient.
+-- Type Signatures are required for all functions!
+
+-- 1. Define a function called basicMath that takes a pair of Integrals (whole numbers) and returns a tuple with the sum, difference, product and quotient.
 -- For example basicMath 8 2 should return (10, 6, 16, 4). 
 -- Be careful with the division one!
 -- test command: cabal run basic-math-test -v0
 
--- 2. Define a function factors that returns a list of all the factors of the number given.
+-- 2. Define a function named factors that returns a list of all the factors of the number given.
 -- For example, factors 12 returns [1,2,3,4,6,12].
 -- Hint: this is do-able reasonably if you use a list comprehension.
 -- test command: cabal run factors-test -v0
