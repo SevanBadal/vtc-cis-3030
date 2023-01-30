@@ -20,7 +20,7 @@ jobs:
         cabal-version: '3.6.2.0'
         
     - name: Set Project Name as ENV var
-      run: echo PROJECT_NAME=${GITHUB_REPOSITORYa#*/} >> $GITHUB_ENV
+      run: echo PROJECT_NAME=$(echo ${GITHUB_REPOSITORY#*\/} | sed 's/.*\///' ) >> $GITHUB_ENV
     
     - name: Print Project Name
       run: echo $PROJECT_NAME
