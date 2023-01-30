@@ -20,13 +20,13 @@ jobs:
         cabal-version: '3.6.2.0'
         
     - name: Debug Repo Name
-      run: echo REPOSITORY_NAME=${GITHUB_REPOSITORY#*\/} >> $GITHUB_ENV
+      run: echo REPOSITORY_NAME=${GITHUB_REF_NAME#*\/} >> $GITHUB_ENV
       
     - name: Print Repo Name
       run: echo $REPOSITORY_NAME
         
     - name: Set Project Name as ENV var
-      run: echo PROJECT_NAME=$(echo ${GITHUB_REPOSITORY#*\/} | sed 's/.*\///' ) >> $GITHUB_ENV
+      run: echo PROJECT_NAME=$(echo ${GITHUB_REF_NAME#*\/} | sed 's/.*\///' ) >> $GITHUB_ENV
     
     - name: Print Project Name
       run: echo $PROJECT_NAME
@@ -44,10 +44,13 @@ jobs:
           ${{ runner.os }}-
 
     - name: Install dependencies
+      working-directory: ./$PROJECT_NAME
       run: |
         cabal update
         cabal build --only-dependencies --enable-tests --enable-benchmarks
     - name: Build
+      working-directory: ./$PROJECT_NAME
       run: cabal build --enable-tests --enable-benchmarks all
     - name: Run tests
+      working-directory: ./$PROJECT_NAME
       run: cabal test all
