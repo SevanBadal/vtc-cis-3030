@@ -9,10 +9,10 @@ exampleSum :: Int -> Int -> Int
 exampleSum x y = x + y
 
 -- add a type signature
-exampleDiff replaceMe andReplaceMe = replaceMe
+exampleDiff x y = x - y
 
 -- add a type signature
-exampleProduct replaceMe andReplaceMe = replaceMe
+exampleProduct x y = x * y
 
 -- add a type signature
-exampleQuotient replaceMe andReplaceMe = replaceMe
+exampleQuotient x y = x / y
