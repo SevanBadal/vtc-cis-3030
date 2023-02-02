@@ -15,6 +15,13 @@ Cabal is required to build/run the testsuite and main application of each subdir
 
 Contact your instructor immediately if you are unable to complete the installation described above. 
 
+### Branching Standard
+This repo uses GitHub Actions to automate testing when certain branches are pushed. In order for this action to run correctly, users must name their branches accordingly:
+```
+<user-name>/<project-name>
+```
+`user-name` is any name that can be used to identify the student.  `project-name` must match one of the project subdirectories in this repository. For example, if student Buzz wanted to sumbit the "Simple Functions" homework assignment. They would push a branch named `buzz/simple-functions` to the this remote repository.
+
 ### Toolchain Version Checklist
-[]  GHC   9.2.5           recommended,base-4.16.4.0  
-[]  cabal 3.6.2.0         recommended     
+- [ ]  GHC   9.2.5           recommended,base-4.16.4.0  
+- [ ]  cabal 3.6.2.0         recommended     
