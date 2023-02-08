@@ -10,8 +10,8 @@ exampleSum x y = x + y
 -- Be careful with the division one!
 -- test command: cabal run basic-math-test -v0
 
-basicMath :: (Fractional a) => a -> a -> (a, a, a, a)
-basicMath x y = (x + y, x - y, x * y, x / y)
+basicMath :: (Integral a) => a -> a -> (a, a, a, a)
+basicMath x y = (x + y, x - y, x * y, x `div` y)
 
 
 -- 2. Define a function named factors that returns a list of all the factors of the number given.
@@ -47,6 +47,6 @@ corn :: Double -> Double
 corn x 
   | x > 35 = x * 0.35
   | x > 23 = x * 0.4
-  | x > 12 = x * 0.45
+  | x >= 12 = x * 0.45
   | x < 12 = x * 0.5
   | otherwise = -1
