@@ -3,6 +3,25 @@ module SimpleFunctions where
 exampleSum :: Int -> Int -> Int
 exampleSum x y = x + y
 
+factors :: Integral a => a -> [a]
+factors n = [x | x <- [1..n], n `mod` x == 0]
+
+compute :: (Char, Double, Double) -> Double
+compute ('+', x, y) = x + y
+compute ('-', x, y) = x - y
+compute ('*', x, y) = x * y
+compute ('/', x, y) = x / y
+
+basicMath :: Integral a => a -> a -> (a, a, a, a)
+basicMath a b = (a + b, a - b, a * b, a `div` b)
+
+corn :: Int -> Double
+corn n
+  | n < 12 = 0.5 * fromIntegral n
+  | n >= 12 && n <= 23 = 0.45 * fromIntegral n
+  | n >= 24 && n <= 35 = 0.40 * fromIntegral n
+  | n > 35 = 0.35 * fromIntegral n
+  
 -- Type Signatures are required for all functions!
 
 -- 1. Define a function called basicMath that takes a pair of Integrals (whole numbers) and returns a tuple with the sum, difference, product and quotient.
