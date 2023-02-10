@@ -1,5 +1,6 @@
 module SimpleFunctions where
 
+
 exampleSum :: Int -> Int -> Int
 exampleSum x y = x + y
 
@@ -29,10 +30,20 @@ exampleSum x y = x + y
 -- test command: cabal run corn-test -v0
 
 corn :: (Floating a, Ord a) => a -> a 
-corn x = if x <  12  
-        then x * 0.50 
-        else x
+corn x 
+  | x < 12 = x * 0.50
+  | x >= 12, x <= 23 = x * 0.45
+  | x >= 24, x <= 35 = x * 0.40
+  | otherwise = x * 0.35
 
 
+basicMath :: (Integral x) => x -> x -> (x, x, x, x)
+basicMath x y = (x + y, x - y, x * y, div x y)
 
+factors :: Integral x => x -> [x]
+factors y = [x | x <- [1..y], y `mod` x == 0]
 
+compute :: (Char,Double,Double) -> Double
+compute ('-', x, y) = x - y 
+compute ('+', x, y) = x + y 
+compute ('*', x, y) = x * y 
