@@ -27,3 +27,12 @@ exampleSum x y = x + y
 -- If the customer is purchasing 24 to 35 ears, the price per ear is $0.40.
 -- If the customer is purchasing more than 35 ears, the price per ear is $0.35.
 -- test command: cabal run corn-test -v0
+
+corn :: (Floating a, Ord a) => a -> a 
+corn x = if x <  12  
+        then x * 0.50 
+        else x
+
+
+
+
