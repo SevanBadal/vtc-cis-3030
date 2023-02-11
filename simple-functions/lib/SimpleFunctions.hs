@@ -28,13 +28,13 @@ factors b = [ a | a <- [1..b], b `mod` a == 0 ]
 -- For example, compute ('+',3,4) should return 7.
 -- test command: cabal run compute-test -v0
 
-compute :: (MathSymbol a, Num b) => b -> (a, b, b)
+compute :: (Num a) => (Char, a, a) -> a
 compute
 	| ("+", a, b) = a + b
 	| ("-", a, b) = a - b
 	| ("*", a, b) = a * b
-	| ("/", a, b) = a / b
-	| otherwise = "Something was entered incorrectly, try again."
+	| ("/", a, b) = fromIntegral(a) / fromIntegral(b)
+	| otherwise = 0
 
 -- 4. Write a function corn that accepts the number of ears of corn the customer is purchasing and outputs the total price.
 -- The corn is priced according to the following four statements:
@@ -44,7 +44,7 @@ compute
 -- If the customer is purchasing more than 35 ears, the price per ear is $0.35.
 -- test command: cabal run corn-test -v0
 
-corn :: (Num a, int b) => a -> b
+corn :: (Num a, Num b) => a -> b
 corn
 	| a < 1 = 0
 	| a < 12 = 0.50 * fromIntegral(a)
