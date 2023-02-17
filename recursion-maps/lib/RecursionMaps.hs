@@ -1,5 +1,5 @@
 module RecursionMaps where
--- Add module imports below, I have give you a few. You should need anything beyond these!
+-- Add module imports below, I've given you a few. You shouldn't need anything beyond these!
 -- Feel free to rename the qualified imports
 import qualified Data.Map as Dict
 import qualified Data.List as List
